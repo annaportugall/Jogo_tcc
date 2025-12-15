@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/TX Plant with Shadow.png-e2bb5ac5563d5380b99770ca9c30d8c5.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://terrain/assets/big_map/Pixel Art Top Down - Basic v1.2.2/Texture/Extra/TX Plant with Shadow.png"
+dest_files=[ "res://.import/TX Plant with Shadow.png-e2bb5ac5563d5380b99770ca9c30d8c5.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

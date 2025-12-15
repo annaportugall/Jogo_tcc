@@ -1,4 +1,4 @@
-[gd_scene load_steps=146 format=2]
+[gd_scene load_steps=147 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" type="Texture" id=9]
 [ext_resource path="res://assets/standard/walk.png" type="Texture" id=10]
 [ext_resource path="res://assets/walk.png" type="Texture" id=11]
+[ext_resource path="res://scenes/Map.tscn" type="PackedScene" id=12]
 
 [sub_resource type="GDScript" id=24]
 
@@ -1687,8 +1688,10 @@ animations = [ {
 [node name="Node2D" type="Node2D"]
 script = SubResource( 24 )
 
+[node name="Map" parent="." instance=ExtResource( 12 )]
+
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -99, 83 )
+position = Vector2( 563, 875 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 10, 32 )
 cell_quadrant_size = 32
@@ -1704,6 +1707,7 @@ frames = SubResource( 111 )
 player_id = 2
 
 [node name="AnimatedSprite" parent="KinematicBody2D2" index="1"]
+position = Vector2( 1, 1 )
 frames = SubResource( 148 )
 
 [editable path="KinematicBody2D"]
