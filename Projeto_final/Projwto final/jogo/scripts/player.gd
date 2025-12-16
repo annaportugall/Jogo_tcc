@@ -2,10 +2,16 @@ extends KinematicBody2D
 
 export(int) var player_id = 1
 
+
 var speed = 200
 var velocity = Vector2.ZERO
 var last_dir = "down"
 
+var score = 0
+
+func _ready():
+	add_to_group("player")
+	
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	

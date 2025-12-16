@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 [gd_scene load_steps=183 format=2]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=183 format=2]
+=======
+[gd_scene load_steps=150 format=2]
+>>>>>>> ded753d29ca70e5efe4562482b1dad55d2a9c357
+>>>>>>> 69bf8dd47e920e98f4db823b0372f9ffe1eb35bf
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" type="Texture" id=2]
@@ -11,8 +19,16 @@
 [ext_resource path="res://assets/Pixel Crawler - Free Pack/Environment/Structures/Stations/Sawmill/Level_1.png" type="Texture" id=9]
 [ext_resource path="res://assets/standard/walk.png" type="Texture" id=10]
 [ext_resource path="res://assets/walk.png" type="Texture" id=11]
+<<<<<<< HEAD
 [ext_resource path="res://scenes/camera.gd" type="Script" id=12]
 [ext_resource path="res://scenes/main.gd" type="Script" id=13]
+=======
+[ext_resource path="res://scenes/Map.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/moeda.gd" type="Script" id=13]
+[ext_resource path="res://scenes/moeda png real.png" type="Texture" id=14]
+
+[sub_resource type="GDScript" id=24]
+>>>>>>> 69bf8dd47e920e98f4db823b0372f9ffe1eb35bf
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 0, 0, 0, 0 )
@@ -1864,18 +1880,34 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CircleShape2D" id=149]
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 13 )
 
+[node name="Map" parent="." instance=ExtResource( 12 )]
+position = Vector2( 509, -3 )
+
 [node name="TileMap" type="TileMap" parent="."]
+<<<<<<< HEAD
 position = Vector2( 97, 202 )
+=======
+position = Vector2( 640, 883 )
+>>>>>>> 69bf8dd47e920e98f4db823b0372f9ffe1eb35bf
 tile_set = SubResource( 1 )
 cell_size = Vector2( 10, 32 )
 cell_quadrant_size = 32
 format = 1
+<<<<<<< HEAD
 tile_data = PoolIntArray( -262135, 536870972, 0, -262132, 536870930, 0, -262129, 536870930, 0, -262127, 536870930, 0, -262126, 536870930, 0, -262125, 536870930, 0, -262124, 536870930, 0, -262123, 536870930, 0, -262122, 536870930, 0, -262121, 536870930, 0, -262120, 536870930, 0, -262119, 536870930, 0, -262118, 536870930, 0, -262117, 536870930, 0, -262116, 536870930, 0, -262115, 536870930, 0, -196596, 1073741842, 0, -196593, 1073741842, 0, -196591, 1073741842, 0, -196590, 1073741876, 0, -196589, 1073741842, 0, -196588, 1073741876, 0, -196586, 1073741842, 0, -196584, 1073741842, 0, -196583, 1073741876, 0, -196582, 1073741842, 0, -196581, 1073741876, 0, -196580, 1073741842, 0, -131070, 34, 0, -131061, -536870873, 0, -131059, -536870878, 0, -131056, 34, 0, -131053, -1610612702, 0, -131050, -1610612702, 0, -131047, -1610612702, 0, -131045, -1610612702, 0, -131043, -2147483609, 0, -65525, -536870873, 0, -65523, -536870878, 0, -65520, 34, 0, -65517, -1610612702, 0, -65514, -1610612702, 0, -65512, -1610612702, 0, -65509, 34, 0, -65507, -2147483609, 0, 11, -536870873, 0, 13, -536870878, 0, 16, 34, 0, 19, -1610612702, 0, 20, -1610612702, 0, 22, -1610612702, 0, 25, -1610612702, 0, 27, 1610612770, 0, 28, -536870854, 0, 29, -2147483609, 0, 31, -536870853, 0, 39, 34, 0, 65547, -536870873, 0, 65549, -536870878, 0, 65552, 34, 0, 65555, -1610612702, 0, 65558, -1610612702, 0, 65560, -1610612702, 0, 65563, 1610612770, 0, 65565, -2147483609, 0, 131083, -536870873, 0, 131085, -536870878, 0, 131088, -1073741790, 0, 131091, 1610612770, 0, 131094, 1610612770, 0, 131096, 1610612770, 0, 131099, 1610612770, 0, 131101, -2147483609, 0, 196620, 536870966, 0, 196623, 536870966, 0, 196626, 536870966, 0, 196628, 536870966, 0, 196630, 536870966, 0, 196633, 536870966, 0, 196636, 536870963, 0, 262178, 34, 0, 262228, 15, 0 )
 
 [node name="player1" parent="." instance=ExtResource( 1 )]
+=======
+tile_data = PoolIntArray( -262135, 536870972, 0 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 547, 412 )
+>>>>>>> 69bf8dd47e920e98f4db823b0372f9ffe1eb35bf
 
 [node name="CollisionShape2D" parent="player1" index="0"]
 position = Vector2( 618, 116 )
@@ -1884,6 +1916,7 @@ position = Vector2( 618, 116 )
 position = Vector2( 532, 113 )
 frames = SubResource( 111 )
 
+<<<<<<< HEAD
 [node name="player2" parent="." instance=ExtResource( 1 )]
 player_id = 2
 
@@ -1902,3 +1935,29 @@ script = ExtResource( 12 )
 
 [editable path="player1"]
 [editable path="player2"]
+=======
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 590, 394 )
+player_id = 2
+
+[node name="AnimatedSprite" parent="KinematicBody2D2" index="1"]
+position = Vector2( 1, 1 )
+frames = SubResource( 148 )
+
+[node name="moeda" type="Area2D" parent="."]
+position = Vector2( 696, 170 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moeda"]
+shape = SubResource( 149 )
+
+[node name="Sprite" type="Sprite" parent="moeda"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[connection signal="body_entered" from="moeda" to="moeda" method="_on_moeda_body_entered"]
+
+[editable path="KinematicBody2D"]
+[editable path="KinematicBody2D2"]
+>>>>>>> 69bf8dd47e920e98f4db823b0372f9ffe1eb35bf
