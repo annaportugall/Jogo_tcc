@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=2]
+[gd_scene load_steps=150 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Pixel Crawler - Free Pack/Environment/Tilesets/Water_tiles.png" type="Texture" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://assets/standard/walk.png" type="Texture" id=10]
 [ext_resource path="res://assets/walk.png" type="Texture" id=11]
 [ext_resource path="res://scenes/Map.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/moeda.gd" type="Script" id=13]
+[ext_resource path="res://scenes/moeda png real.png" type="Texture" id=14]
 
 [sub_resource type="GDScript" id=24]
 
@@ -1685,6 +1687,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CircleShape2D" id=149]
+
 [node name="Node2D" type="Node2D"]
 script = SubResource( 24 )
 
@@ -1709,6 +1713,20 @@ player_id = 2
 [node name="AnimatedSprite" parent="KinematicBody2D2" index="1"]
 position = Vector2( 1, 1 )
 frames = SubResource( 148 )
+
+[node name="moeda" type="Area2D" parent="."]
+position = Vector2( 696, 170 )
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moeda"]
+shape = SubResource( 149 )
+
+[node name="Sprite" type="Sprite" parent="moeda"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[connection signal="body_entered" from="moeda" to="moeda" method="_on_moeda_body_entered"]
 
 [editable path="KinematicBody2D"]
 [editable path="KinematicBody2D2"]
